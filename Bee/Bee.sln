@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E6A75027-67C0-4277-B83F-D0A090FB623F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{7FA4948C-27FF-4D3B-B279-C870793610E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{95463CD7-1025-4A82-A8AD-2ABACF69363E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{A69949EC-4D42-43B1-A65F-ACCBC691B907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee.Data", "Bee.Data\Bee.Data.csproj", "{74A6D28E-146B-4468-B656-7AED42900CA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee.Models", "Bee.Models\Bee.Models.csproj", "{44DCF448-D628-4A00-A540-D330949D3EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee.App", "Bee.App\Bee.App.csproj", "{CF8B5FED-97BB-4787-A68B-5676EA34920C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74A6D28E-146B-4468-B656-7AED42900CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A6D28E-146B-4468-B656-7AED42900CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A6D28E-146B-4468-B656-7AED42900CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A6D28E-146B-4468-B656-7AED42900CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44DCF448-D628-4A00-A540-D330949D3EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DCF448-D628-4A00-A540-D330949D3EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DCF448-D628-4A00-A540-D330949D3EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DCF448-D628-4A00-A540-D330949D3EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8B5FED-97BB-4787-A68B-5676EA34920C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8B5FED-97BB-4787-A68B-5676EA34920C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8B5FED-97BB-4787-A68B-5676EA34920C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8B5FED-97BB-4787-A68B-5676EA34920C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74A6D28E-146B-4468-B656-7AED42900CA8} = {E6A75027-67C0-4277-B83F-D0A090FB623F}
+		{44DCF448-D628-4A00-A540-D330949D3EDD} = {E6A75027-67C0-4277-B83F-D0A090FB623F}
+		{CF8B5FED-97BB-4787-A68B-5676EA34920C} = {7FA4948C-27FF-4D3B-B279-C870793610E1}
+	EndGlobalSection
+EndGlobal

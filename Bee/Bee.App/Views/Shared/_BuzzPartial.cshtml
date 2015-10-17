@@ -1,0 +1,41 @@
+﻿@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("Buzz", "Buzz", FormMethod.Post, new { @class = "navbar-right" }))
+    {
+        <ul class="nav navbar-nav navbar-right" id="partial-nav">
+            <li>
+                <div class="navbar-partial">
+                    <!--MODAL BUTTON-->
+                    <button class="btn btn-info" type="button"
+                            data-toggle="modal"
+                            data-target="#buzz-modal"
+                            data-backdrop="false"
+                            data-keyboard="false">
+                        Buzz
+                    </button>
+                    <!--MODAL-->
+                    <div id="buzz-modal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" data-target="#buzz-modal">&times;</button>
+                                    <h4 class="modal-title">Buzz</h4>
+                                </div>
+                                <div class="modal-body">
+                                    @Html.TextArea("Content", htmlAttributes: new { @rows = 10, @class="modal-content-custum" } )
+                                </div>
+                                <div class="modal-footer">
+                                    <!--CANCEL-->
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal" data-target="#buzz-modal">Cancel</button>
+                                    <!--BUZZ-->
+                                    <input type="submit" value="Buzz" class="btn - btn-success"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF MODAL-->
+                </div>
+            </li>
+        </ul>
+    }
+}
