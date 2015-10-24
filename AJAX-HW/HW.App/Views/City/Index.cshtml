@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Cities";
+}
+
+<h2>Search for city</h2>
+
+<form id="search-city" action="#" method="GET">
+    <label class="label label-primary" for="searchInput">City name</label>
+   
+    <input id="searchInput" class="form-control" type="search" name="input-search" value="" />
+    
+    <input class="btn btn-success" type="submit" name="name" value="Search" />
+</form>
+
+@section Scripts {
+    <script>
+        var searchInput = $('#searchInput');
+
+        // AUTO COMPLETE
+        var autoCompleteInput = function () {
+            // GET INPUT
+            var inputValue = searchInput.val();
+
+            // IF INPUT IS NOT EMPTY
+            if (inputValue) {
+                $.getJSON("City/AutocompleteCityName", { input: inputValue }, function (response) {
+                    // FIRST TIME CREATE LIST
+                    if (!$('#cities-list').length) {
+                        $('<ul id="cities-list">').appendTo('#search-city');
+                    }
+
+                    // SELECT LIST
+                    var citiesList = $('#cities-list');
+
+                    // EACH TIME BEFORE REQUEST EMPTY LIST
+                    citiesList.empty();
+
+                    // FILL OUT THE LIST WITH RESULTED CITIES
+                    response.forEach(function (city) {
+                        $('<li>').text(city).appendTo(citiesList);
+                    });
+                });
+            } else {
+                // IF INPUT IS EMPTY -> EMPTY LIST
+                $('#cities-list').empty();
+            }
+        };
+
+        // ON KEY PRESS (USER TYPE)
+        searchInput.keyup(function () {
+            autoCompleteInput();
+        });
+
+        // ON FOCUS (USER TAB PROB COPY/PASTE)
+        searchInput.focus(function () {
+            autoCompleteInput();
+        });
+    </script>
+}

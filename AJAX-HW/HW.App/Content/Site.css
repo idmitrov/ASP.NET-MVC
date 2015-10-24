@@ -1,0 +1,67 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.user-item {
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+}
+
+.user-item-tooltip {
+    vertical-align: top;
+    display: inline-block;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    right: -250px;
+}
+
+.user-item-tooltip img {
+    width: 100%;
+}
+
+.form-control {
+    display: inline-block;
+}
+
+.label-primary {
+    font-size: 16px;
+}
+
+#search-city {
+    display: inline-block;
+    position: relative;
+}
+
+#cities-list {
+    font-weight: bold;
+    position: absolute;
+    padding: 10px;
+    list-style-type: none;
+}
+
+#cities-list li {
+    margin-top: 5px;
+}

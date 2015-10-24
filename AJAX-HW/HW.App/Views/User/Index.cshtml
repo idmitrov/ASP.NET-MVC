@@ -1,0 +1,44 @@
+﻿@model IEnumerable<HW.App.Models.UserListViewModel>
+
+@{
+    ViewBag.Title = "Peoples";
+}
+
+<h2>Peoples</h2>
+@{
+    foreach (var user in Model)
+    {
+        <div>
+            <a id="@user.Id" class="user-item btn-link" title="@user.Name Profile">@user.Name</a>
+        </div>
+    }
+}
+
+@section Scripts {
+    <script>
+        var userItem = $('.user-item').hover(function () {
+            var userId = this.id;
+
+            $.get("User/UserDetails", { userId: userId }, function (result) {
+                if (!$("#profile-tooltip").length) {
+                    var userDetails = result[0];
+
+                    var toolTip =
+                        '<ul class="row user-item-tooltip" id="profile-tooltip">' +
+                            "<span>"+ '<img src="' + userDetails['ProfileImage'] + '" alt="profile-image"/>' +"</span>"+
+                            "<li>" + "Address: " + userDetails['Address'] + "</li>" +
+                            "<li>" + "Contact: " + userDetails['PhoneNumber'] + "</li>" +
+                            "<li>" + "Email: " + userDetails['Email'] + "</li>" +
+                            "<li>" + "Status: " + userDetails['Status'] + "</li>" +
+                            "<li>" + "Age: " + userDetails['Age'] + "</li>" +
+                        '</ul';
+
+                    var hoveredElementSelector = "#" + userId;
+                    $(hoveredElementSelector).append(toolTip);
+                } else {
+                    $("#profile-tooltip").remove();
+                }
+            });
+        });
+    </script>
+}
