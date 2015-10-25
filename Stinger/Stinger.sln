@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3DB8C220-33F2-412F-B305-A47F9B3D32A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{19EB471B-81FC-4EB2-9698-ABA87D68500A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5B12C1B7-FD35-4EB1-8F28-C2C3F550EFAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{1CCEC0CB-4821-4FA3-B42E-425F4A175802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stinger.Data", "Stinger.Data\Stinger.Data.csproj", "{7873B040-A00C-4C11-8428-B9C7182B5063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stingers.Models", "Stingers.Models\Stingers.Models.csproj", "{38DBFD74-6167-4FA8-9037-33A084319DD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stinger.App", "Stinger.App\Stinger.App.csproj", "{FF71A40C-B150-44C7-9F7E-99F5F04DDFC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7873B040-A00C-4C11-8428-B9C7182B5063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7873B040-A00C-4C11-8428-B9C7182B5063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7873B040-A00C-4C11-8428-B9C7182B5063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7873B040-A00C-4C11-8428-B9C7182B5063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DBFD74-6167-4FA8-9037-33A084319DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DBFD74-6167-4FA8-9037-33A084319DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DBFD74-6167-4FA8-9037-33A084319DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DBFD74-6167-4FA8-9037-33A084319DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF71A40C-B150-44C7-9F7E-99F5F04DDFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF71A40C-B150-44C7-9F7E-99F5F04DDFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF71A40C-B150-44C7-9F7E-99F5F04DDFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF71A40C-B150-44C7-9F7E-99F5F04DDFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7873B040-A00C-4C11-8428-B9C7182B5063} = {3DB8C220-33F2-412F-B305-A47F9B3D32A9}
+		{38DBFD74-6167-4FA8-9037-33A084319DD4} = {3DB8C220-33F2-412F-B305-A47F9B3D32A9}
+		{FF71A40C-B150-44C7-9F7E-99F5F04DDFC6} = {19EB471B-81FC-4EB2-9698-ABA87D68500A}
+	EndGlobalSection
+EndGlobal
