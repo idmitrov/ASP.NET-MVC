@@ -7,7 +7,7 @@ namespace Stinger.Data.Migrations
     using Microsoft.AspNet.Identity.EntityFramework;
     using Stingers.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<StingerDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<StingerDbContext>
     {
         public Configuration()
         {

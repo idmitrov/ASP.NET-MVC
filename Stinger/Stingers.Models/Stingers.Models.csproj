@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\StingMessage.cs" />
+    <Compile Include="Enum\Gender.cs" />
     <Compile Include="Enum\NotificationType.cs" />
     <Compile Include="Enum\Status.cs" />
     <Compile Include="Favorite.cs" />
