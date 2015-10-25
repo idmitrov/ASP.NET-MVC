@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Contracts\IRepository.cs" />
     <Compile Include="Contracts\IStingerData.cs" />
+    <Compile Include="StingerData.cs" />
     <Compile Include="StingerDbContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

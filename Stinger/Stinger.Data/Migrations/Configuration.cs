@@ -1,6 +1,7 @@
 namespace Stinger.Data.Migrations
 {
     using System.Data.Entity.Migrations;
+    using System.Diagnostics;
     using System.Linq;
 
     using Microsoft.AspNet.Identity;
@@ -17,14 +18,27 @@ namespace Stinger.Data.Migrations
 
         protected override void Seed(StingerDbContext context)
         {
-            // TODO: ADD DEFAULT ADMIN
+            // CREATE ADMIN ROLE
+            if (!context.Roles.Any(r => r.Name == "Admin"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var adminRole = new IdentityRole() { Name = "Admin" };
 
-            //if (!context.Users.Any())
-            //{
-            //    var store = new UserStore<ApplicationUser>(context);
-            //    var manager = new UserManager<ApplicationUser>(store);
-            //    var stingerAdmin = new ApplicationUser() { UserName = "admin" };
-            //}
+                manager.Create(adminRole);
+            }
+
+            // CREATE ADMIN USER 
+            // TODO: PREFERABLE TO LOAD USER CREDENTIALS FROM AN EXTERNAL FILE
+            if (!context.Users.Any())
+            {
+                var store = new UserStore<User>(context);
+                var manager = new UserManager<User>(store);
+                var stingerAdmin = new User() { UserName = "admin" };
+
+                manager.Create(stingerAdmin, "password");
+                manager.AddToRole(stingerAdmin.Id, "Admin");
+            }
         }
     }
 }
