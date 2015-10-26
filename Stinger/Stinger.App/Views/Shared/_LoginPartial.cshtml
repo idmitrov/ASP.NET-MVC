@@ -1,17 +1,41 @@
 ﻿@using Microsoft.AspNet.Identity
+
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-    </ul>
+        <ul id="logged-in-partial" class="nav navbar-nav navbar-right">
+            <li class="btn-group">
+                <button class="btn btn-info" data-toggle="modal" data-target="#global-submit-form-dialog" data-backdrop="false" title="Sting">
+                    Sting
+                </button>
+
+                <button class="btn btn-default dropdown-toggle" type="button" id="profile-drop-down-menu" title="Your Control Panel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>@User.Identity.GetUserName()</span>
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="profile-drop-down-menu">
+                    @if (@User.IsInRole("Admin"))
+                    {
+                        <li>
+                            @Html.ActionLink("Admin Panel", "Index", "Home", new { Area="Admin" }, new {title = "Profile"})
+                        </li>
+                    }
+                    <li>
+                        @Html.ActionLink("Profile", "Index", "Manage", null, new { title = "Profile" })
+                    </li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()" title="Log out">Log out</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     }
+
+    @Html.Partial("_GlobalSubmitForm")
 }
 else
 {

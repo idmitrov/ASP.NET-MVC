@@ -22,3 +22,42 @@ select,
 textarea {
     max-width: 280px;
 }
+/*CUSTUM*/
+.stinger-logo {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 100%;
+}
+
+.glyphicon-home::before {
+    margin-right: 10px;
+}
+
+.glyphicon-home:hover {
+    box-shadow: 0 1px 0 0 #000;
+    transition: box-shadow, 1s;
+}
+
+/*LOGGED IN PARTIAL*/
+#logged-in-partial {
+    margin-top: 7px;
+}
+
+/*GLOBAL SUBMIT FORM*/
+#global-submit-form-dialog {
+    overflow: hidden;
+}
+#global-dialog-content {
+    cursor: all-scroll;
+}
+/*GLOBAL SUBMIT FORM => TEXT AREA*/
+.text-content-custom {
+    max-width: 100%;
+    width: 100%;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+}
+/*END OF GLOBAL SUBMIT FORM*/
